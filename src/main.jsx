@@ -1,17 +1,16 @@
-// ✅ main.jsx (Updated with all routes connected)
-
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 
-// ✅ Pages
+
 import Home from "./pages/Home";
 import Plants from "./pages/Plants";
 import Profile from "./pages/Profile";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import PlantDetails from "./Pages/PlantDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -23,6 +22,7 @@ const router = createBrowserRouter([
       { path: "profile", element: <Profile /> },
       { path: "login", element: <Login /> },
       { path: "register", element: <Register /> },
+      { path: "plantDetails/:id", element: <PlantDetails /> },
     ],
   },
 ]);

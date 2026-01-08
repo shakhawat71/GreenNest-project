@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Watering Tips",
+    "image": "https://i.ibb.co.com/sJtD97zx/weathering.jpg",
+    "description": "Water your plants only when the top soil feels dry. Overwatering is the #1 reason indoor plants die. Always use a pot with drainage holes."
+  },
+  {
+    "id": 2,
+    "title": "Sunlight Tips",
+    "image": "https://i.ibb.co.com/Kc4TsDtj/sunlight.jpg",
+    "description": "Most indoor plants love bright indirect sunlight. Keep them near windows, but avoid harsh direct sunlight for long hours as it can burn leaves."
+  },
+  {
+    "id": 3,
+    "title": "Fertilizing Tips",
+    "image": "https://i.ibb.co.com/m5Lzr5Cd/Fertilizing-Tips.jpg",
+    "description": "Use fertilizer once every 2 to 4 weeks during spring and summer. Avoid fertilizing in winter when plants grow slowly."
+  },
+  {
+    "id": 4,
+    "title": "Pruning & Cleaning",
+    "image": "https://i.ibb.co.com/sp0Jmn5W/Pruning-Cleaning.jpg",
+    "description": "Trim dead leaves regularly to encourage new growth. Wipe leaves with a damp cloth to remove dust and help the plant absorb more light."
+  }
+]

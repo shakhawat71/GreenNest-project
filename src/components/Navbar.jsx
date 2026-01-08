@@ -37,7 +37,7 @@ export default function Navbar() {
       : "btn btn-outline btn-success btn-xs";
 
   return (
-    <div className="navbar bg-white shadow-sm px-4">
+    <div className="navbar mb-4 shadow-sm px-4">
       {/* ✅ Mobile: Left Hamburger Menu */}
       <div className="navbar-start md:hidden">
         <div className="dropdown">
@@ -183,7 +183,7 @@ export default function Navbar() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
               >
                 <li>
                   <span className="font-semibold">

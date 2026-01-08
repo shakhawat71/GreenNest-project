@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Ayesha Rahman",
+    "specialization": "Indoor Plant Specialist",
+    "experience": "6+ Years Experience",
+    "image": "https://i.ibb.co.com/gL8hMc6k/female-doctor1.webp",
+    "description": "Ayesha helps people choose the best indoor plants and teaches easy-care routines for busy lifestyles."
+  },
+  {
+    "id": 2,
+    "name": "Tanvir Ahmed",
+    "specialization": "Succulent & Cactus Expert",
+    "experience": "5+ Years Experience",
+    "image": "https://i.ibb.co.com/hR9bg2GX/male-doctor-1.webp",
+    "description": "Tanvir specializes in drought-tolerant plants and guides beginners on low-maintenance plant care."
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Jahan",
+    "specialization": "Flowering Plant Advisor",
+    "experience": "7+ Years Experience",
+    "image": "https://i.ibb.co.com/G3Nn5L5K/female-doctor-2.jpg",
+    "description": "Nusrat teaches how to keep flowering plants blooming longer and how to maintain healthy roots and soil."
+  },
+  {
+    "id": 4,
+    "name": "Sabbir Hossain",
+    "specialization": "Soil & Fertilizer Specialist",
+    "experience": "8+ Years Experience",
+    "image": "https://i.ibb.co.com/tw2NDt2N/male-doctor-2.jpg",
+    "description": "Sabbir focuses on healthy soil mixtures, composting, and the best fertilizing techniques for long-term growth."
+  }
+]

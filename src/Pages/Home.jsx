@@ -79,7 +79,7 @@ export default function Home() {
   }, [activeSlide]);
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#C8E6C9]">
       {/* HERO SLIDER */}
       <div className="w-full h-screen relative overflow-hidden">
         <div
@@ -134,7 +134,7 @@ export default function Home() {
       </div>
 
       {/* TOP RATED INDOOR PLANTS SECTION */}
-      <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 py-16 bg-[#C8E6C9]">
         <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
           Top Rated Indoor Plants
         </h2>
@@ -170,12 +170,12 @@ export default function Home() {
                 </div>
 
                 <div className="card-actions mt-4 w-full">
-                  <button
-                    className="btn btn-outline bg-white btn-success w-full"
-                    onClick={() => navigate(`/plantDetails/${plant.plantId}`)}
-                  >
-                    View Details
-                  </button>
+                <button
+                className="btn btn-outline bg-white btn-success w-full"
+                onClick={() => navigate("/plants")}>
+                Explore More Plants
+                </button>
+
                 </div>
               </div>
             </div>
@@ -184,7 +184,7 @@ export default function Home() {
       </div>
       
       {/* PLANT CARE TIPS SECTION */}
-      <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 py-16 bg-[#C8E6C9]">
         <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
           Plant Care Tips
         </h2>
@@ -213,7 +213,7 @@ export default function Home() {
       </div>
 
       {/* MEET OUR GREEN EXPERTS SECTION */}
-      <div className="max-w-6xl mx-auto px-4 py-16 bg-white">
+      <div className="max-w-6xl mx-auto px-4 py-16 bg-[#C8E6C9]">
         <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
           Meet Our Green Experts
         </h2>
@@ -247,6 +247,82 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </div>
+      
+      {/* PLANT OF THE WEEK SECTION */}
+      <div className="max-w-6xl mx-auto px-4 py-16 bg-[#C8E6C9]">
+        <h2 className="text-3xl font-bold text-center text-green-700 mb-12">
+          Plant of the Week 
+        </h2>
+
+        {plants.length > 0 && (
+          <div className="card lg:card-side group bg-linear-to-b from-green-800 via-green-300 to-white shadow-xl transition duration-300 hover:shadow-2xl hover:-translate-y-1">
+            
+            {/* Left Image */}
+            <figure className="lg:w-1/2 p-6 overflow-hidden rounded-xl">
+              <img
+                src={[...plants].sort((a, b) => b.rating - a.rating)[0].image}
+                alt="Plant of the Week"
+                className="rounded-xl w-full h-80 object-cover transition duration-300 group-hover:scale-105"
+              />
+            </figure>
+
+            {/* Right Content */}
+            <div className="card-body lg:w-1/2">
+              <h2 className="card-title text-green-900 text-3xl font-bold">
+                {[...plants].sort((a, b) => b.rating - a.rating)[0].plantName}
+              </h2>
+
+              {/*Badges */}
+              <div className="flex flex-wrap gap-2 mt-2">
+                <span className="badge badge-success text-white">
+                  ⭐ {[...plants].sort((a, b) => b.rating - a.rating)[0].rating}
+                </span>
+
+                <span className="badge badge-outline badge-success">
+                  {[...plants].sort((a, b) => b.rating - a.rating)[0].category}
+                </span>
+
+                <span className="badge badge-outline badge-success">
+                  Care: {[...plants].sort((a, b) => b.rating - a.rating)[0].careLevel}
+                </span>
+              </div>
+
+              {/*Description */}
+              <p className="text-gray-700 mt-4">
+                {[...plants]
+                  .sort((a, b) => b.rating - a.rating)[0]
+                  .description.slice(0, 250)}
+                ...
+              </p>
+
+              {/* Price + Stock */}
+              <div className="flex justify-between mt-6">
+                <p className="font-bold text-black text-lg">
+                  Price: ${[...plants].sort((a, b) => b.rating - a.rating)[0].price}
+                </p>
+
+                <p className="font-bold text-black text-lg">
+                  Stock: {[...plants].sort((a, b) => b.rating - a.rating)[0].availableStock}
+                </p>
+              </div>
+
+              {/*Button */}
+              <div className="card-actions mt-6">
+                <button
+                  className="btn btn-success w-full text-white"
+                  onClick={() =>
+                    navigate(
+                      `/plantDetails/${[...plants].sort((a, b) => b.rating - a.rating)[0].plantId}`
+                    )
+                  }
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
 
 

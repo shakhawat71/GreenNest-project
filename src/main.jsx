@@ -2,27 +2,65 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+
 import App from "./App.jsx";
 
+// ✅ Pages
+import Home from "./pages/Home.jsx";
+import Plants from "./pages/Plants.jsx";
+import MyProfile from "./pages/Profile.jsx";
+import Login from "./pages/Login.jsx";
+import Register from "./pages/Register.jsx";
+import PlantDetails from "./pages/PlantDetails.jsx";
 
-import Home from "./pages/Home";
-import Plants from "./pages/Plants";
-import Profile from "./pages/Profile";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import PlantDetails from "./Pages/PlantDetails.jsx";
+// ✅ Protected Route
+import PrivateRoute from "./routes/PrivateRoute.jsx";
+
+// ✅ Toast
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <App />, // ✅ App includes Navbar + Footer + Outlet
     children: [
-      { index: true, element: <Home /> },
-      { path: "plants", element: <Plants /> },
-      { path: "profile", element: <Profile /> },
-      { path: "login", element: <Login /> },
-      { path: "register", element: <Register /> },
-      { path: "plantDetails/:id", element: <PlantDetails /> },
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/plants",
+        element: <Plants />,
+      },
+
+      // ✅ Protected Profile Page
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <MyProfile />
+          </PrivateRoute>
+        ),
+      },
+
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/register",
+        element: <Register />,
+      },
+
+      // ✅ Protected Plant Details Route
+      {
+        path: "/plantDetails/:id",
+        element: (
+          <PrivateRoute>
+            <PlantDetails />
+          </PrivateRoute>
+        ),
+      },
     ],
   },
 ]);
@@ -30,5 +68,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <RouterProvider router={router} />
+    <Toaster position="top-right" reverseOrder={false} />
   </StrictMode>
 );

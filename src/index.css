@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 html, body, #root {
-  background-color: white;
+  background-color: #C8E6C9;
   min-height: 100%;
 }

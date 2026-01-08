@@ -1,55 +1,57 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 export default function PlantDetails() {
   const { id } = useParams();
-  const navigate = useNavigate();
-
   const [plant, setPlant] = useState(null);
-  const [loading, setLoading] = useState(true);
 
+  // Form state
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+  });
+
+  // Fetch plant details from JSON
   useEffect(() => {
     fetch("/plants.json")
       .then((res) => res.json())
       .then((data) => {
-        const foundPlant = data.find((p) => p.plantId === parseInt(id));
-        setPlant(foundPlant);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
+        const singlePlant = data.find((p) => p.plantId === parseInt(id));
+        setPlant(singlePlant);
       });
   }, [id]);
 
-  if (loading) {
+  // Input handler
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Submit handler
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    toast.success("Consultation booked successfully.");
+
+    // Clear form
+    setFormData({ name: "", email: "" });
+  };
+
+  // Loading
+  if (!plant) {
     return (
-      <div className="min-h-screen flex justify-center items-center">
+      <div className="min-h-screen flex justify-center items-center bg-white">
         <span className="loading loading-spinner loading-lg text-green-600"></span>
       </div>
     );
   }
 
-  if (!plant) {
-    return (
-      <div className="min-h-screen flex flex-col justify-center items-center">
-        <h2 className="text-3xl font-bold text-red-500">Plant not found ❌</h2>
-        <button
-          className="btn btn-success mt-4"
-          onClick={() => navigate("/")}
-        >
-          Back to Home
-        </button>
-      </div>
-    );
-  }
-
   return (
-    <div className="bg-white min-h-screen py-10 px-4">
-      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <div className="bg-white min-h-screen px-4 py-16">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
 
-        {/*Image */}
-        <div className="rounded-lg overflow-hidden shadow-md">
+        {/* Left Side: Plant Image */}
+        <div className="rounded-xl shadow-lg overflow-hidden">
           <img
             src={plant.image}
             alt={plant.plantName}
@@ -57,37 +59,75 @@ export default function PlantDetails() {
           />
         </div>
 
-        {/*Details */}
+        {/* Right Side: Plant Info */}
         <div>
-          <h1 className="text-4xl font-bold text-green-700">{plant.plantName}</h1>
-          <p className="text-gray-500 mt-2">{plant.category}</p>
+          <h1 className="text-4xl font-bold text-green-700 mb-4">
+            {plant.plantName}
+          </h1>
 
-          <div className="flex gap-6 mt-4">
-            <p className="text-xl font-semibold text-green-700">${plant.price}</p>
-            <p className="text-lg font-medium">⭐ {plant.rating}</p>
+          <p className="text-gray-600 mb-4">
+            {plant.description}
+          </p>
+
+          <div className="space-y-2 text-lg">
+            <p className="font-bold text-black">
+              Category:
+              {plant.category}
+            </p>
+            <p className="font-bold text-black">
+              Price: ${plant.price}
+            </p>
+            <p className="font-bold text-black">
+             Rating: {plant.rating}
+            </p>
+            <p className="font-bold text-black">
+              Stock:
+              {plant.availableStock} Available
+            </p>
+            <p className="font-bold text-black">
+             Care Level:
+              {plant.careLevel}
+            </p>
+            <p className="font-bold text-black">
+              Provider: 
+              {plant.providerName}
+            </p>
           </div>
 
-          <div className="mt-4 space-y-2 text-gray-700">
-            <p><span className="font-semibold">Available Stock:</span> {plant.availableStock}</p>
-            <p><span className="font-semibold">Care Level:</span> {plant.careLevel}</p>
-            <p><span className="font-semibold">Provider:</span> {plant.providerName}</p>
-          </div>
+          {/* Book Consultation Form */}
+          <div className="mt-10 p-6 rounded-xl shadow-md bg-linear-to-b from-green-200 to-white">
+            <h2 className="text-2xl font-bold text-green-800 mb-6">
+              Book Consultation
+            </h2>
 
-          <button
-            className="btn btn-success mt-6"
-            onClick={() => navigate("/plants")}
-          >
-            Back to Plants
-          </button>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                className="input input-bordered w-full text-black bg-white"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email Address"
+                className="input input-bordered text-black w-full bg-white"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+
+              <button type="submit" className="btn btn-success w-full">
+                Book Now
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
 
-      {/* Description */}
-      <div className="max-w-5xl mx-auto mt-10 bg-base-100 shadow-md rounded-lg p-6">
-        <h2 className="text-2xl font-bold text-green-700 mb-4">
-          Description
-        </h2>
-        <p className="text-gray-700 whitespace-pre-line">{plant.description}</p>
       </div>
     </div>
   );

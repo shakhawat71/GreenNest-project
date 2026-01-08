@@ -19,26 +19,26 @@ export default function Navbar() {
     await signOut(auth);
   };
 
-  // ✅ Active link styles for navigation
+  // Active link styles for navigation
   const navLinkStyle = ({ isActive }) =>
     isActive
-      ? "font-medium text-green-600"
-      : "font-medium text-black hover:text-green-600";
+      ? "font-medium text-green-700"
+      : "font-medium text-black hover:text-green-700 transition";
 
-  // ✅ Active style for Login/Register buttons
+  // Active style for Login/Register buttons
   const authBtnStyle = ({ isActive }) =>
     isActive
       ? "btn btn-success btn-sm text-white"
-      : "btn btn-outline btn-success btn-sm";
+      : "btn btn-outline btn-success btn-sm bg-white";
 
   const authBtnStyleMobile = ({ isActive }) =>
     isActive
       ? "btn btn-success btn-xs text-white"
-      : "btn btn-outline btn-success btn-xs";
+      : "btn btn-outline btn-success btn-xs bg-white";
 
   return (
-    <div className="navbar mb-4 shadow-sm px-4">
-      {/* ✅ Mobile: Left Hamburger Menu */}
+    <div className="navbar mb-4 shadow-md px-4 bg-linear-to-r from-green-300 via-white to-green-300">
+      {/* Mobile: Left Hamburger Menu */}
       <div className="navbar-start md:hidden">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -60,7 +60,7 @@ export default function Navbar() {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow-lg"
           >
             <li>
               <NavLink to="/" className={navLinkStyle}>
@@ -81,14 +81,14 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* ✅ Mobile: Center Logo */}
+      {/* Mobile: Center Logo */}
       <div className="navbar-center md:hidden">
         <Link to="/" className="cursor-pointer">
           <img src={Logo} alt="GreenNest Logo" className="h-10 w-auto" />
         </Link>
       </div>
 
-      {/* ✅ Mobile: Right Auth */}
+      {/* Mobile: Right Auth */}
       <div className="navbar-end md:hidden">
         {user ? (
           <div className="dropdown dropdown-end">
@@ -97,7 +97,7 @@ export default function Navbar() {
               role="button"
               className="btn btn-ghost btn-circle avatar"
             >
-              <div className="w-9 rounded-full">
+              <div className="w-9 rounded-full ring ring-green-600 ring-offset-2">
                 <img
                   alt="User Avatar"
                   src={
@@ -110,10 +110,10 @@ export default function Navbar() {
 
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow-lg"
             >
               <li>
-                <span className="font-semibold">
+                <span className="font-semibold text-green-800">
                   {user.displayName || "User"}
                 </span>
               </li>
@@ -137,7 +137,7 @@ export default function Navbar() {
         )}
       </div>
 
-      {/* ✅ Desktop / Laptop Layout */}
+      {/* Desktop / Laptop Layout */}
       <div className="hidden md:flex w-full items-center">
         {/* Left: Logo */}
         <div className="flex-1">
@@ -147,7 +147,7 @@ export default function Navbar() {
         </div>
 
         {/* Middle: Navigation Links */}
-        <div className="flex gap-8 justify-center flex-1">
+        <div className="flex gap-10 justify-center flex-1">
           <NavLink to="/" className={navLinkStyle}>
             Home
           </NavLink>
@@ -170,7 +170,7 @@ export default function Navbar() {
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
               >
-                <div className="w-10 rounded-full">
+                <div className="w-10 rounded-full ring ring-green-600 ring-offset-2">
                   <img
                     alt="User Avatar"
                     src={
@@ -183,19 +183,19 @@ export default function Navbar() {
 
               <ul
                 tabIndex={0}
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow-lg"
               >
                 <li>
-                  <span className="font-semibold">
+                  <span className="font-semibold text-green-800">
                     {user.displayName || "User"}
                   </span>
                 </li>
 
-                <li>
+                <li className="text-green-800">
                   <NavLink to="/profile">My Profile</NavLink>
                 </li>
 
-                <li>
+                <li className="text-green-800">
                   <button onClick={handleLogout}>Logout</button>
                 </li>
               </ul>

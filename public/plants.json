@@ -1,0 +1,98 @@
+[
+  {
+    "plantId": 1,
+    "plantName": "Snake Plant",
+    "category": "Air Purifier",
+    "price": 18,
+    "rating": 4.8,
+    "availableStock": 10,
+    "careLevel": "Easy",
+    "description": "Snake Plant (Sansevieria), also known as Mother-in-Law’s Tongue, is one of the strongest and most beginner-friendly indoor plants you can own. Its tall upright leaves with bold green patterns instantly add a modern and clean aesthetic to bedrooms, offices, living rooms, and even small apartments. One of the key reasons Snake Plant is so popular is because it can survive almost any indoor condition. It tolerates low light, irregular watering, dry air, and temperature changes better than most houseplants—making it perfect for busy people or anyone new to plant care.\n\nBeyond its beauty and toughness, Snake Plant is highly valued for improving indoor air quality. It naturally filters toxins from the air and helps freshen your space. Unlike many plants, it releases oxygen at night, which is why many people place it in bedrooms to promote a healthier sleeping environment. It’s also a slow-grower, meaning it won’t outgrow your space quickly, but with proper care it can live for years.\n\nCaring for a Snake Plant is simple. Place it in indirect sunlight, though it can survive low light. Water only when the soil is completely dry, because overwatering is the biggest risk. Use well-draining soil and avoid leaving it in standing water. If you want a plant that looks stylish, requires minimal effort, and keeps your home feeling fresh, the Snake Plant is a perfect choice.",
+    "image": "https://i.ibb.co.com/Xr67w6fT/Snake-Plant.webp",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 2,
+    "plantName": "Peace Lily",
+    "category": "Flowering",
+    "price": 22,
+    "rating": 4.7,
+    "availableStock": 7,
+    "careLevel": "Medium",
+    "description": "Peace Lily (Spathiphyllum) is a beautiful indoor plant known for its elegant white blooms and glossy deep green leaves. It brings a calm and refreshing atmosphere into your home and is often chosen for living rooms, offices, or bedrooms because it looks both luxurious and peaceful. One of the biggest advantages of Peace Lily is that it’s not only a decorative plant—it also helps improve indoor air quality by filtering common pollutants and increasing humidity in dry indoor spaces.\n\nPeace Lily is a great plant for people who want a flowering houseplant without too much difficulty. It thrives well in medium to low indirect sunlight. Direct sunlight can burn its leaves, so it prefers shaded areas or filtered light near a window. It also has a unique way of communicating: when it needs water, its leaves droop slightly, making it easier to understand. This makes it beginner-friendly even though it requires more regular watering than drought-resistant plants.\n\nTo keep Peace Lily healthy, water it when the topsoil feels dry. Avoid overwatering, but don’t let it dry out completely. It enjoys humidity, so occasional misting is helpful. Wipe the leaves to remove dust and keep the plant looking shiny. With good care, it produces elegant flowers multiple times a year. Peace Lily is a perfect choice for anyone who wants a combination of beauty, air purification, and a calming vibe indoors.",
+    "image": "https://i.ibb.co.com/xKwhM8dC/Peace-Lily.jpg",
+    "providerName": "Leaf & Loom"
+  },
+  {
+    "plantId": 3,
+    "plantName": "Golden Pothos",
+    "category": "Trailing Vine",
+    "price": 15,
+    "rating": 4.6,
+    "availableStock": 14,
+    "careLevel": "Easy",
+    "description": "Golden Pothos (Epipremnum aureum) is one of the most popular trailing indoor plants because it is affordable, attractive, and extremely easy to maintain. Its heart-shaped leaves feature bright green colors mixed with golden yellow patterns, making it a vibrant option for shelves, hanging baskets, and indoor corners. This plant is perfect for anyone who loves indoor greenery but doesn’t want a complicated care routine.\n\nGolden Pothos is highly adaptable. It grows well in low light conditions, but its golden variegation becomes more vibrant in bright indirect light. It also grows quickly and can produce long vines, making it excellent for decorating walls or creating a natural indoor “green curtain” effect. Many people also keep it on work desks and office spaces because it requires minimal attention.\n\nThis plant is also known for improving air quality by filtering certain toxins from indoor environments. Because it grows quickly, you can prune it to keep it bushy and healthy. The cuttings can also be propagated easily in water, allowing you to grow more plants without extra cost.\n\nTo care for Golden Pothos, water it when the topsoil dries out, but avoid letting it sit in soggy soil. It prefers warm temperatures and normal indoor humidity. If you’re looking for a plant that grows fast, looks beautiful, and forgives mistakes, Golden Pothos is one of the best indoor choices.",
+    "image": "https://i.ibb.co.com/7NT4SKYg/Golden-Pothos.jpg",
+    "providerName": "GreenNest Supply"
+  },
+  {
+    "plantId": 4,
+    "plantName": "ZZ Plant",
+    "category": "Low Light",
+    "price": 25,
+    "rating": 4.9,
+    "availableStock": 6,
+    "careLevel": "Easy",
+    "description": "ZZ Plant (Zamioculcas zamiifolia) is a modern indoor plant that is loved for its glossy, thick leaves and its powerful ability to survive in extreme indoor conditions. It is often called a “nearly indestructible” plant because it tolerates low light, irregular watering, and dry indoor air better than most houseplants. This makes it a perfect choice for offices, apartments, and people with busy lifestyles.\n\nThe ZZ Plant has a premium look because its leaves appear polished and shiny. It adds elegance and richness to indoor décor, especially for modern and minimalistic spaces. Many interior designers use it as a corner plant or tabletop plant because it gives a clean, structured appearance without requiring constant attention.\n\nZZ Plant is also valued for its ability to improve indoor air quality. It grows slowly but can last many years, making it a long-term investment plant. Its thick roots store water, which is why it can survive long periods without watering.\n\nCare is simple: keep it in low to bright indirect sunlight, water only when the soil is completely dry, and make sure the pot drains well. Overwatering is the only major risk. If you want a plant that looks expensive, stays green year-round, and requires almost zero effort, ZZ Plant is one of the best indoor options available.",
+    "image": "https://i.ibb.co.com/GGj4FVc/Zamioculcas-zamiifolia.webp",
+    "providerName": "UrbanGreen Studio"
+  },
+  {
+    "plantId": 5,
+    "plantName": "Spider Plant",
+    "category": "Air Purifier",
+    "price": 14,
+    "rating": 4.5,
+    "availableStock": 12,
+    "careLevel": "Easy",
+    "description": "Spider Plant (Chlorophytum comosum) is a classic indoor plant loved for its long arching green-and-white leaves and its adorable baby plantlets that grow like hanging spiders. It is a perfect indoor plant for beginners because it grows quickly, adapts easily, and remains attractive with minimal care. Spider Plant is also one of the best natural air purifiers, helping remove toxins and improve oxygen levels inside your home.\n\nThis plant thrives in bright indirect sunlight but can also handle moderate indoor light. It looks especially beautiful in hanging pots, balcony baskets, or tabletop containers where the plantlets can cascade downward. One of the best things about Spider Plant is how easily it multiplies. The baby plantlets can be cut and replanted to grow new plants, making it a fun and rewarding plant for indoor gardeners.\n\nSpider Plant is also pet-friendly compared to many houseplants, which makes it a safer option for homes with cats or dogs. Its cheerful and lively appearance adds energy to any indoor space.\n\nTo care for Spider Plant, water when the soil becomes slightly dry and avoid overwatering. It enjoys occasional misting and prefers well-draining soil. If you want a low-cost, fast-growing, air-purifying plant that looks fresh all year, Spider Plant is a perfect addition to your indoor plant collection.",
+    "image": "https://i.ibb.co.com/DfVJ0nnS/Spider-Plant.jpg",
+    "providerName": "Sprout & Co."
+  },
+  {
+    "plantId": 6,
+    "plantName": "Monstera Deliciosa",
+    "category": "Tropical Foliage",
+    "price": 35,
+    "rating": 4.8,
+    "availableStock": 5,
+    "careLevel": "Medium",
+    "description": "Monstera Deliciosa is one of the most trending tropical indoor plants, famous for its large split leaves that create a bold and dramatic look. Often called the “Swiss Cheese Plant,” it instantly transforms any room into a stylish green space. Its lush foliage makes it perfect for modern homes, office interiors, cafés, and aesthetic indoor setups. Many plant lovers choose Monstera because it looks luxurious and grows into a stunning centerpiece plant over time.\n\nMonstera thrives in bright indirect sunlight and grows best in warm, humid environments. As it matures, the leaves become larger and develop more splits, giving it an exotic rainforest vibe. It can also climb if supported with a moss pole, which makes it even more decorative.\n\nTo care for Monstera, water when the topsoil is dry but avoid keeping the soil too wet. Use a well-draining potting mix and ensure good airflow. Occasional misting helps maintain humidity, especially if you keep it indoors with air conditioning.\n\nThis plant is perfect for people who want a bold and premium-looking plant that makes a statement. With moderate care and a good placement near indirect sunlight, Monstera can grow into a beautiful indoor jungle feature in your space.",
+    "image": "https://i.ibb.co.com/fYM6BMX9/onstera-Deliciosa.webp",
+    "providerName": "Leaf & Loom"
+  },
+  {
+    "plantId": 7,
+    "plantName": "Aloe Vera",
+    "category": "Succulent",
+    "price": 16,
+    "rating": 4.4,
+    "availableStock": 9,
+    "careLevel": "Easy",
+    "description": "Aloe Vera is a popular indoor succulent known for its thick, spiky leaves filled with soothing natural gel. It is both a decorative plant and a useful household plant because its gel is commonly used for skin care, minor burns, and natural remedies. Aloe Vera is ideal for sunny windowsills, balconies, or indoor spaces that receive bright light.\n\nAloe Vera is a low-maintenance plant and perfect for beginners because it requires very little watering. Its leaves store water, allowing it to survive drought conditions easily. Overwatering is the biggest risk, so it’s best to water only when the soil is completely dry. Aloe grows best in well-draining soil, such as cactus or succulent mix.\n\nIn addition to its benefits, Aloe Vera adds a clean and fresh look to indoor décor. Its unique leaf shape makes it a stylish addition to kitchens, desks, or bedroom windows. With proper care, it can produce small flowers, and it also multiplies by producing baby “pups” that can be replanted.\n\nIf you want an indoor plant that is beautiful, easy to grow, and also useful for everyday life, Aloe Vera is a perfect choice for your collection.",
+    "image": "https://i.ibb.co.com/xtc48rmx/Aloe-Vera.jpg",
+    "providerName": "GreenNest Supply"
+  },
+  {
+    "plantId": 8,
+    "plantName": "Rubber Plant",
+    "category": "Foliage",
+    "price": 28,
+    "rating": 4.7,
+    "availableStock": 8,
+    "careLevel": "Medium",
+    "description": "Rubber Plant (Ficus elastica) is a stunning indoor foliage plant known for its thick, glossy leaves and bold upright growth. It has a luxurious and premium appearance, making it one of the best plants for modern home décor. Many people choose Rubber Plant because it makes indoor spaces feel elegant, fresh, and expensive. It works beautifully in living rooms, offices, reception areas, and corners where you need a strong decorative plant.\n\nRubber Plant grows best in bright indirect sunlight, though it can adapt to moderate indoor light. In good lighting, it can grow taller and produce larger leaves, becoming a strong statement plant. It also helps improve indoor air quality and creates a refreshing indoor atmosphere.\n\nCaring for Rubber Plant requires moderate attention. Water it when the topsoil feels dry and avoid keeping it constantly wet. It prefers well-draining soil and benefits from occasional leaf wiping to keep the leaves shiny and clean. Rubber Plant also enjoys warm indoor temperatures and normal humidity.\n\nIf you want a plant that looks bold, stylish, and makes your home feel premium, Rubber Plant is an excellent choice. With consistent care and good placement near bright indirect sunlight, it becomes a long-lasting indoor centerpiece plant that keeps growing beautifully for years.",
+    "image": "https://i.ibb.co.com/Sw1yZ8CG/Rubber-Plant.webp",
+    "providerName": "UrbanGreen Studio"
+  }
+]
